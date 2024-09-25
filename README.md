@@ -1,46 +1,33 @@
-Project Overview
-This project implements Principal Component Analysis (PCA) to reduce the dimensionality of datasets, improving data visualization and interpretation. The PCA method allows for efficient data compression while preserving the most significant features.
+# Principal Component Analysis (PCA) Assignment
+This repository implements Principal Component Analysis (PCA) for dimensionality reduction on two datasets: a synthetic Given Matrix and the real-world Fuel Economy Dataset (fuel-econ.csv). PCA transforms high-dimensional data into a lower-dimensional space while retaining essential variability, aiding in data visualization and improving machine learning efficiency.
 
-Dataset
-The assignment utilizes two datasets:
+## Datasets
+1. **Given Matrix**: A synthetic dataset used to test the PCA implementation.
+2. **Fuel Economy Dataset**: Contains features such as engine size and weight, demonstrating PCA's practical application.
 
-Given Matrix: This is a synthetic dataset provided for practice with PCA. The initial exploration and calculations were conducted on this matrix.
-Fuel Economy Dataset (fuel-econ.csv): This dataset contains various features related to fuel economy, including make, model, year, and MPG (miles per gallon). The analysis focuses on the application of PCA to understand the underlying structure of the data.
-Installation
-To run this project, ensure you have the following libraries installed:
-
-numpy
-pandas
-scikit-learn
-You can install them using pip:
-
+## Installation
+To run the code, install the required libraries with:
 bash
-Copy code
-pip install numpy pandas scikit-learn
-Usage
-Clone the repository or download the files.
-Open the Jupyter Notebook or Python script.
-Ensure that the dataset (fuel-econ.csv) is in the correct directory.
-Run the cells sequentially to perform PCA and view the results.
-Steps Involved
-The PCA implementation is structured as follows:
+pip install pandas numpy scikit-learn
 
-Standardization: The datasets are standardized to have a mean of zero and a standard deviation of one.
-Covariance Matrix Calculation: The covariance matrix of the standardized data is computed to understand the relationships between different features.
-Eigendecomposition: Eigenvalues and eigenvectors are derived from the covariance matrix.
-Sorting Eigenvalues and Eigenvectors: The eigenvalues and corresponding eigenvectors are sorted in descending order.
-Matrix Multiplication: The standardized data is projected onto the top k principal components to obtain the reduced data.
-Results
-The output includes:
+## Usage
+Clone the repository and navigate to the project directory. Execute the PCA script to see the results.
 
-The standardized data.
-Covariance matrix.
-Eigenvalues and eigenvectors.
-Reduced dataset projected onto the principal components.
-The explained variance for each principal component.
-Conclusion
-PCA successfully reduced the dimensionality of the fuel economy dataset, allowing for more straightforward data analysis and visualization. This method provides insight into the most significant features affecting fuel economy, facilitating better decision-making.
+## Steps Involved
+1. Load datasets.
+2. Preprocess data (handle missing values and encode categorical variables).
+3. Standardize the data.
+4. Calculate the covariance matrix.
+5. Perform eigendecomposition to obtain eigenvalues and eigenvectors.
+6.  Sort eigenvalues and eigenvectors.
+7.  Project data onto the top k principal components.
 
-References
-Principal Component Analysis - Wikipedia
-Scikit-learn Documentation
+## Results
+The analysis yields a reduced dataset and explained variance for each principal component, enhancing data structure understanding.
+
+## Conclusion
+PCA effectively reduces dimensionality while preserving variance, making it a valuable tool for data analysis and visualization.
+
+## References
+1. Jolliffe, I. T. (2002). Principal Component Analysis.
+2. Bishop, C. M. (2006). Pattern Recognition and Machine Learning.
